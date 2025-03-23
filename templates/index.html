@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm" action="/generate" method="POST" enctype="multipart/form-data">
+            <!-- Personal Details -->
+            <h2>Personal Details</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="github">GitHub Profile:</label>
+            <input type="url" id="github" name="github" required>
+
+            <!-- Professional Summary -->
+            <h2>Professional Summary</h2>
+            <textarea id="summary" name="summary" rows="4" required></textarea>
+
+            <!-- Education -->
+            <h2>Education</h2>
+            <label for="10th_grade">10th Grade Details:</label>
+            <input type="text" id="10th_grade" name="10th_grade" required>
+
+            <label for="12th_grade">12th Grade Details:</label>
+            <input type="text" id="12th_grade" name="12th_grade" required>
+
+            <label for="education">Higher Education:</label>
+            <input type="text" id="education" name="education" required>
+
+            <!-- Skills -->
+            <h2>Skills</h2>
+            <textarea id="skills" name="skills" rows="4" required></textarea>
+
+            <!-- Projects -->
+            <h2>Projects</h2>
+            <textarea id="projects" name="projects" rows="4" required></textarea>
+
+            <!-- Achievements -->
+            <h2>Achievements</h2>
+            <textarea id="achievements" name="achievements" rows="4" required></textarea>
+
+            <!-- Certifications -->
+            <h2>Certifications</h2>
+            <textarea id="certifications" name="certifications" rows="4" required></textarea>
+
+            <!-- Photo Upload -->
+            <h2>Passport Size Photo</h2>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <!-- Submit Button -->
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+</body>
+</html>

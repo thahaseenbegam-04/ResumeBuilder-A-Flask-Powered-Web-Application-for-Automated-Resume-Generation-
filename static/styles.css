@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a, #2e1a47); /* Black to Lavender gradient */
+    color: #ffffff;
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Container for the Form */
+.container {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(150, 131, 236, 0.5); /* Lavender shadow */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Maximum width for larger screens */
+    margin: 20px; /* Add margin for smaller screens */
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #967bec; /* Lavender color */
+    font-size: 2rem; /* Smaller font size for mobile */
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(150, 131, 236, 0.7); /* Glow effect */
+}
+
+/* Section Headings */
+h2 {
+    color: #967bec; /* Lavender color */
+    margin-top: 15px;
+    font-size: 1.25rem; /* Smaller font size for mobile */
+    text-shadow: 0 0 5px rgba(150, 131, 236, 0.5); /* Glow effect */
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ffffff; /* White color */
+    font-size: 0.9rem; /* Smaller font size for mobile */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 8px; /* Smaller padding for mobile */
+    margin-bottom: 10px;
+    border: 1px solid #967bec; /* Lavender border */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    color: #ffffff; /* White text */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    border-color: #b19cd9; /* Lighter lavender on focus */
+    box-shadow: 0 0 10px rgba(150, 131, 236, 0.5); /* Glow effect */
+    outline: none;
+}
+
+/* File Input */
+input[type="file"] {
+    margin-bottom: 15px;
+    color: #ffffff; /* White text */
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px; /* Smaller padding for mobile */
+    background-color: #967bec; /* Lavender color */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #b19cd9; /* Lighter lavender on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Background Animation */
+body::before {
+    content: '';
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(150, 131, 236, 0.1), rgba(26, 26, 26, 0.8)); /* Lavender radial gradient */
+    animation: pulse 10s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem; /* Smaller font size for tablets */
+    }
+
+    h2 {
+        font-size: 1.1rem; /* Smaller font size for tablets */
+    }
+
+    .container {
+        padding: 15px; /* Smaller padding for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    h2 {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+
+    label {
+        font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea {
+        padding: 6px; /* Smaller padding for mobile */
+        font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+
+    button {
+        padding: 8px; /* Smaller padding for mobile */
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+}
