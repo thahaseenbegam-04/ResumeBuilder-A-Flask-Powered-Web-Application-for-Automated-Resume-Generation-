@@ -1,0 +1,2 @@
+# ResumeBuilder-A-Flask-Powered-Web-Application-for-Automated-Resume-Generation-
+ResumeBuilder is a Flask-powered web application designed to simplify the process of creating professional resumes. With an intuitive and user-friendly interface, users can input their personal, educational, and professional details, and the application dynamically generates a well-structured resume in PDF format using FPDF.
